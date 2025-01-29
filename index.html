@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Aditiawan</title>
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- Bootstrap Css -->
+    <link href="assets/libs/bootstrap/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .carousel-item {
+            /* Set aspect ratio 16:9 */
+            aspect-ratio: 16 / 9;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <style>
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-weight: bold;
+        }
+
+        .card-text.text-overflow {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .shadow-sm {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <style>
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+        }
+
+        footer h5 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        footer p,
+        footer a {
+            color: #ddd;
+        }
+
+        footer a:hover {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        .embed-responsive-4by3 {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+
+        .embed-responsive-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+
+            .footer-logo,
+            .footer-map {
+                text-align: center;
+            }
+        }
+    </style>
+    <style>
+        .video-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .embed-responsive-16by9 {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+
+        .embed-responsive-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        h2 {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        p.text-muted {
+            color: #6c757d;
+            font-size: 16px;
+        }
+    </style>
+    <style>
+        .judul-section {
+            position: absolute;
+            /* Allows overlapping */
+            top: -100px;
+            /* Adjust as needed to overlap */
+            left: 0;
+            right: 0;
+            z-index: 1;
+            /* Ensures it appears on top of the carousel */
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            background-color: transparent;
+            /* Optional: Add a background with some transparency */
+        }
+    </style>
+    <style>
+        .social-card {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            background-color: #f8f9fa;
+        }
+
+        .social-card i {
+            margin-bottom: 10px;
+        }
+
+        .social-card h6 {
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand ms-3" href="">
+                    <img src="assets/images/snapian-horizontal.png" alt="Logo Kejari" height="50">
+                </a>
+            </div>
+
+            <!-- Navbar Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme">About Me & Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cv">Download CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portofolio">My Portofolio</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#perkenalan">Introduction</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">Info</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media & Login -->
+            <div class="d-flex align-items-center">
+                <a href="https://facebook.com/ianaditiawan" target="_blank" class="text-white me-3">
+                    <i class="ri-facebook-fill fs-4"></i>
+                </a>
+                <a href="https://instagram.com/new_snapian" target="_blank" class="text-white me-3">
+                    <i class="ri-instagram-line fs-4"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ian-aditiawan" target="_blank" class="text-white me-3">
+                    <i class="ri-linkedin-fill fs-4"></i>
+                </a>
+                <a href="https://github.com/snapsnap" target="_blank" class="text-white me-3">
+                    <i class="ri-github-fill fs-4"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- segment card info -->
+    <div class="row bg-white p-5" id="aboutme">
+        <!-- Image Section -->
+        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 mb-5 mb-lg-0 d-flex align-items-stretch">
+            <div class="w-100 h-100 position-relative">
+                <img src="assets/images/me-2.png" class="img-fluid rounded position-absolute w-100 h-100" alt="Person Image" style="border-radius: 10px; object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 d-flex align-items-stretch">
+            <div class="row info-segment justify-content-center flex-column w-100">
+
+                <!-- First Card -->
+                <div class="card mb-4 shadow-sm border-0" style="border-radius: 15px; background-color: #ffc107;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title ">Ian Aditiawan (Ian) - contact: +6285335922439</h5>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="card mb-4 shadow-sm border-0" style="border-radius: 15px; background-color: #f8f9fa;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">What skills do I have?</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success"></i> Web Development</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Mobile Development</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Software Architecture Analyze</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Implementation of design into programs</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Database Query</li>
+                            <li><i class="fas fa-check-circle text-success"></i> Web & Mobile Deployment (Release)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="card mb-4 shadow-sm border-0" style="border-radius: 15px; background-color: #f8f9fa;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">What programming languages or frameworks do I have ?</h5>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-chevron-right text-info"></i> PHP, HTML, CSS, JavaScript (JQuery or AJAX).</li>
+                            <li><i class="fas fa-chevron-right text-info"></i> CodeIgniter, Laravel, Redis.</li>
+                            <li><i class="fas fa-chevron-right text-info"></i> Dart & Flutter (Android & IOs), Firebase, Google Playstore.</li>
+                            <li><i class="fas fa-chevron-right text-info"></i> MySQL, MS SQL Server.</li>
+                            <li><i class="fas fa-chevron-right text-info"></i> Figma, CorelDraw, Photoshop.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Segment CV -->
+    <div class="row p-5 bg-light" id="cv">
+        <!-- Image Section -->
+        <div class="col-lg-6 col-md-6 mb-4 text-center">
+            <h5>Download Curriculum Vitae (CV)</h5>
+            <p>Want to learn more about my experience and skills? Feel free to download my CV using the link below.</p>
+            <a href="assets/files/CV_NamaAnda.pdf" class="btn btn-primary" download>
+                <i class="bi bi-download"></i> Download CV
+            </a>
+        </div>
+
+        <!-- Text Section -->
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex align-items-stretch">
+            <div class="row info-segment justify-content-center flex-column w-100">
+
+                <!-- Card Pencapaian -->
+                <div class="card mb-4 shadow-sm border-0" style="border-radius: 15px; background-color: #fff; flex-grow: 1;">
+                    <div class="card-body d-flex flex-column ">
+                        <h5 class="card-title text-danger text-center">Achievement</h5>
+                        <p class="card-text text-center" style="font-size: 0.9rem;">
+                            Throughout my career journey, I have successfully developed various web and mobile applications (as listed in my portfolio), enhanced team efficiency through system automation, and provided innovative solutions that improve user satisfaction. With strong dedication, I continuously learn and grow to deliver the best contributions in every project I undertake.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Portofolio segment -->
+    <div class="row justify-content-center mt-4 bg-secondary" id="portofolio">
+        <div class="col-lg-8 text-center mt-4 mb-4">
+            <h4 class="mb-3 text-white">PORTOFOLIO</h4>
+            <p class="text-white">
+                Please take a look at what I have made below.
+            </p>
+        </div>
+    </div>
+    <div class="row info-segment justify-content-center bg-secondary">
+        <div class="card col-xl-3 col-lg-4 col-md-6 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+            <div class="img-container" style="height: 200px; overflow: hidden;">
+                <img src="assets/images/porto/malinda-cover.png" class="card-img-top" alt="..." style="object-fit: cover; width: 100%; height: 100%;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Malinda Apps Mobile</h5>
+                <p class="card-text text-overflow">Aplikasi mobile untuk customer sekaligus operasional inventori untuk Malinda Furniture company.</p>
+                <a class="btn btn-primary" href="">View More</a>
+            </div>
+        </div>
+        <div class="card col-xl-3 col-lg-4 col-md-6 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+            <div class="img-container" style="height: 200px; overflow: hidden;">
+                <img src="assets/images/porto/unhastv-cover.png" class="card-img-top" alt="..." style="object-fit: cover; width: 100%; height: 100%;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Unhas TV - App Berita & Pelatihan Mobile</h5>
+                <p class="card-text text-overflow">Universitas Hasanuddin TV (Unhas TV) Makassar meluncurkan aplikasi mobile untuk suguhan berita & pembelian pelatihan berbasis video online.</p>
+                <a class="btn btn-primary" href="">View More</a>
+            </div>
+        </div>
+        <div class="card col-xl-3 col-lg-4 col-md-6 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+            <div class="img-container" style="height: 200px; overflow: hidden;">
+                <img src="assets/images/porto/maf-showroom-cover.png" class="card-img-top" alt="..." style="object-fit: cover; width: 100%; height: 100%;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">Multindo Showroom App</h5>
+                <p class="card-text text-overflow">MultindoKu Mobile Showroom merupakan aplikasi untuk mitra Dealer/Showroom yang sudah bekerjasama dengan PT. Multindo Auto Finance agar dapat melakukan order Pembiayaan untuk pembelian unit kendaraan.</p>
+                <a class="btn btn-primary" href="">View More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- video segment -->
+    <!-- <section class="video-section bg-light py-5" id="perkenalan">
+        <div class="container">
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 text-center">
+                    <h4 class="mb-3">Introduction</h4>
+                    <p class="text-muted">
+                        In this video, I will introduce myself further, share my experiences, and discuss my goals in this career journey. I hope this video provides a clear picture of who I am and what I do.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/KOb59L-29AI"
+                            frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-4" id="info">
+        <div class="container">
+            <div class="row">
+
+                <!-- Logo and Address -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="footer-logo mb-3">
+                        <img src="assets/images/snapian-horizontal.png" alt="Logo" >
+                    </div>
+                    <p>
+                        <strong>Ian Aditiawan</strong><br>
+                        Jl. Sambiroto 5, Kec. Tembalang, Semarang - Jawa Tengah, Indonesia <br>
+                        Phone. (+62) 85335922439 <br>
+                        Email : ianaditiawan10@gmail.com
+                    </p>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <h5>My Location</h5>
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5642095378576!2d110.45413!3d-7.0263272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d83344302a3%3A0xe9df0a2a42e3bfaf!2sIan+(Pak+Gombloh)!5e0!3m2!1sen!2sid!4v1696833768426!5m2!1sen!2sid"
+                            width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+
+                <!-- Copyright and Quick Links -->
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Ian Aditiawan. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="assets/images/snapian-horizontal.png" alt="Logo" height="50">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JQuery -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
