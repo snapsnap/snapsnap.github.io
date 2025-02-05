@@ -370,7 +370,8 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Malinda Apps Mobile</h5>
                 <p class="card-text text-overflow">Aplikasi mobile untuk customer sekaligus operasional inventori untuk Malinda Furniture company.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/malinda/"> View More </button>
+
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -380,7 +381,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Tiket Taman Nasional Baluran</h5>
                 <p class="card-text text-overflow">Aplikasi mobile untuk handle operasional tiketing Taman Nasional Baluran Situbondo Jawa Timur.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/baluran/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -390,7 +391,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">D2D (Hanter PKB) Mobile Apps</h5>
                 <p class="card-text text-overflow">Aplikasi mobile sidak wajib pajak pengendara dari Bapenda & Samsat Sumatera Selatan.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/d2d/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -400,7 +401,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Unhas TV - App Berita & Pelatihan Mobile</h5>
                 <p class="card-text text-overflow">Universitas Hasanuddin TV (Unhas TV) Makassar meluncurkan aplikasi mobile untuk suguhan berita & pembelian pelatihan berbasis video online.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/unhastv/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -410,7 +411,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Trajumastra Mobile</h5>
                 <p class="card-text text-overflow">Aplikasi transaksi masyarakat nelayan di bawah naungan Dinas Kelautan & Perikanan daerah Bantul.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/trajumastra/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -420,7 +421,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Multindo Showroom App</h5>
                 <p class="card-text text-overflow">MultindoKu Mobile Showroom merupakan aplikasi untuk mitra Dealer/Showroom yang sudah bekerjasama dengan PT. Multindo Auto Finance agar dapat melakukan order Pembiayaan untuk pembelian unit kendaraan.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/maf-showroom/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -430,7 +431,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">E-Absen PB Kejari Batang</h5>
                 <p class="card-text text-overflow">Sistem Absensi Wajib Lapor Narapidana Pembebasan Bersyarat pada Kejaksaan Negeri Batang.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/eabsenpb/"> View More </button>
             </div>
         </div>
         <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-8 col-xs-8 m-3 shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
@@ -440,7 +441,7 @@
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title text-primary">Auth Portal Multindo</h5>
                 <p class="card-text text-overflow">Auth Portal berbasis web di PT. Multindo Auto Finance untuk aplikasi Mobile & Payment Gateway.</p>
-                <a class="btn btn-primary" href="">View More</a>
+                <button class="btn btn-primary btn-view-more" data-folder="/pages/auth-portal/"> View More </button>
             </div>
         </div>
     </div>
@@ -515,10 +516,110 @@
         </div>
     </footer>
 
+    <!-- Fullscreen Modal -->
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">View More</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Carousel -->
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" id="carouselItems">
+                            <!-- Images injected via JavaScript -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <!-- Content from JSON -->
+                    <div class="mt-3">
+                        <h3 id="modalTitleText"></h3>
+                        <p id="modalDesc"></p>
+                        <h5>Tech Stack</h5>
+                        <ul id="modalStack"></ul>
+                        <h5>Features</h5>
+                        <ul id="modalFeatures"></ul>
+                        <a id="modalLink" href="#" target="_blank" class="btn btn-primary d-none">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JQuery -->
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".btn-view-more").forEach(button => {
+                button.addEventListener("click", function() {
+                    let folderPath = this.getAttribute("data-folder");
+                    let jsonFilePath = folderPath + "data.json";
+        
+                    // Fetch data from JSON file
+                    fetch(jsonFilePath)
+                        .then(response => response.json())
+                        .then(jsonData => {
+                            // Update Modal Title & Description
+                            document.getElementById("modalTitleText").textContent = jsonData.title;
+                            document.getElementById("modalDesc").textContent = jsonData.desc;
+        
+                            // Populate Tech Stack
+                            let stackList = document.getElementById("modalStack");
+                            stackList.innerHTML = "";
+                            jsonData.stack.forEach(stack => {
+                                stackList.innerHTML += `<li>${stack}</li>`;
+                            });
+        
+                            // Populate Features
+                            let featuresList = document.getElementById("modalFeatures");
+                            featuresList.innerHTML = "";
+                            jsonData.features.forEach(feature => {
+                                featuresList.innerHTML += `<li>${feature}</li>`;
+                            });
+        
+                            // Handle Link Button
+                            let modalLink = document.getElementById("modalLink");
+                            if (jsonData.link) {
+                                modalLink.href = jsonData.link;
+                                modalLink.classList.remove("d-none");
+                            } else {
+                                modalLink.classList.add("d-none");
+                            }
+        
+                            // Populate Carousel
+                            let carouselInner = document.getElementById("carouselItems");
+                            carouselInner.innerHTML = "";
+                            jsonData.carousel.forEach((img, index) => {
+                                let activeClass = index === 0 ? "active" : "";
+                                carouselInner.innerHTML += `
+                                    <div class="carousel-item ${activeClass}">
+                                        <img src="${folderPath + img}" class="d-block w-100" alt="Slide ${index + 1}">
+                                    </div>
+                                `;
+                            });
+        
+                            // Show Modal
+                            let modal = new bootstrap.Modal(document.getElementById("fullscreenModal"));
+                            modal.show();
+                        })
+                        .catch(error => console.error("Error fetching JSON:", error));
+                });
+            });
+        });
+        </script>
+        
 </body>
 
 </html>

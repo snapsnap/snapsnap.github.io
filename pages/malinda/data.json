@@ -1,0 +1,17 @@
+{
+    "pathfolder":"pages/malinda/",
+    "title":"Malinda Apps",
+    "desc":"Aplikasi Malinda berbasis mobile",
+    "stack":[
+        "DB : MySQL",
+        "Framework : Flutter"
+    ],
+    "features":[
+        "Modul Search Furniture & Category",
+        "List Menu Inventory per Role"
+    ],
+    "link":"",
+    "carousel": [
+        "1.png"
+    ]
+}
