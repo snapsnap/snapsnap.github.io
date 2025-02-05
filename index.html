@@ -192,6 +192,18 @@
         }
     </style>
 
+    <!-- Tambahkan CSS -->
+    <style>
+        .carousel-item img {
+            height: 80vh; /* Sesuaikan tinggi */
+            object-fit: contain; /* Tidak akan terpotong */
+            width: auto; /* Menyesuaikan lebar */
+            margin: auto; /* Pusatkan jika lebih kecil */
+            display: block; /* Pastikan gambar tetap dalam area */
+            background-color: black; /* Tambahkan warna latar belakang agar lebih kontras */
+        }
+    </style>
+
 
 
 </head>
@@ -518,7 +530,7 @@
 
     <!-- Fullscreen Modal -->
     <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalTitle">View More</h5>
