@@ -5,7 +5,7 @@
     "stack":[
         "DB : MySQL",
         "Backend : PHP - Framework CodeIgniter 4",
-        "Frontend : Dart - Framework Flutter, SQLite, FCM (Firebase Cloud Messaging / Notification)",
+        "Frontend : Dart - Framework Flutter, Local Storage, FCM (Firebase Cloud Messaging / Notification)",
         "Platform : Android, iOS"
     ],
     "features":[

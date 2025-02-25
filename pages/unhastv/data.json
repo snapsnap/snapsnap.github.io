@@ -1,0 +1,36 @@
+{
+    "pathfolder":"pages/unhastv/",
+    "title":"Unhas TV - App Berita & Pelatihan Mobile",
+    "desc":"Universitas Hasanuddin TV (Unhas TV) Makassar meluncurkan aplikasi mobile untuk suguhan berita & pembelian pelatihan berbasis video online.",
+    "stack":[
+        "DB : MySQL",
+        "Backend : PHP - Framework CodeIgniter 4",
+        "Frontend : Dart - Framework Flutter, SQLite, Local Storage, FCM (Firebase Cloud Messaging / Notification)",
+        "Platform : Android, iOS"
+    ],
+    "features":[
+        "Dashboard",
+        "Article List",
+        "News List",
+        "Rubrik & Program List",
+        "Course Video List by Category",
+        "Read News & Share",
+        "Buy Online Course Video",
+        "Streaming Online Video & News",
+        "Write Opinion & Send Opinion",
+        "Profile Setting"
+    ],
+    "link":"https://play.google.com/store/apps/details?id=com.desnet.unhastv_edumobile&pcampaignid=web_share",
+    "carousel": [
+        "0.png",
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png",
+        "7.png",
+        "8.png",
+        "9.png"
+    ]
+}
