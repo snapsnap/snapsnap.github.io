@@ -1,16 +1,30 @@
 {
     "pathfolder":"pages/malinda/",
     "title":"Malinda Apps",
-    "desc":"Aplikasi Malinda berbasis mobile",
+    "desc":"Aplikasi mobile untuk customer sekaligus operasional inventori untuk Malinda Furniture company. Malinda Apps adalah aplikasi layanan pelanggan yang dirancang untuk memudahkan Anda dalam mengajukan komplain produk dan melacak status pesanan furniture secara real-time. Dengan fitur komplain dan tracking order yang terintegrasi, Anda dapat memantau proses pemesanan, mengirimkan keluhan, dan mendapatkan respon cepat dari tim kami. Malinda Apps hadir untuk memberikan pengalaman belanja yang lebih nyaman dan transparan!",
     "stack":[
         "DB : MySQL",
-        "Framework : Flutter"
+        "Backend : PHP - Framework CodeIgniter 4",
+        "Frontend : Dart - Framework Flutter, SQLite, FCM (Firebase Cloud Messaging / Notification)",
+        "Platform : Android, iOS"
     ],
     "features":[
         "Modul Search Furniture & Category",
-        "List Menu Inventory per Role"
+        "Multi Role Access",
+        "Menu Complaint Ticket",
+        "Menu Order History",
+        "Menu Sales Order",
+        "Menu Just Delivery",
+        "Menu Barang Masuk & Keluar",
+        "Menu QC In & Out",
+        "Menu Admin Warehouse",
+        "Menu Go Delivery",
+        "Menu Driver Delivery",
+        "Menu Project Request",
+        "Tanda Terima, Invoice, RAB, Work Order (by PDF)",
+        "Standard Approval Process"
     ],
-    "link":"",
+    "link":"https://play.google.com/store/apps/details?id=com.desnet.malinda&pcampaignid=web_share",
     "carousel": [
         "1.png"
     ]

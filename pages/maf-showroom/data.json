@@ -5,12 +5,15 @@
     "stack":[
         "DB : Ms.SQL Server",
         "Backend : PHP - Framework CodeIgniter 3",
-        "Frontend : Dart - Framework Flutter",
+        "Frontend : Dart - Framework Flutter, Firebase Notification",
         "Platform : Android"
     ],
     "features":[
-        "Modul Search Furniture & Category",
-        "List Menu Inventory per Role"
+        "Dashboard",
+        "Branch List",
+        "Credit Order by Showroom",
+        "Credit Order List",
+        "Profile Setting"
     ],
     "link":"",
     "carousel": [
